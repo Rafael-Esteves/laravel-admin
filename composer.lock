@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3d88fa6639c9463d85260309c03bb68",
+    "content-hash": "3d069007744a9bc0b85ae07d4d511d8c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -794,6 +794,53 @@
             "time": "2021-03-21T16:25:00+00:00"
         },
         {
+            "name": "laravel-frontend-presets/material-dashboard",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-frontend-presets/material-dashboard.git",
+                "reference": "077c8430f4faeae3bdb3d4a6c1dbca5a195a1bfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-frontend-presets/material-dashboard/zipball/077c8430f4faeae3bdb3d4a6c1dbca5a195a1bfc",
+                "reference": "077c8430f4faeae3bdb3d4a6c1dbca5a195a1bfc",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelFrontendPresets\\MaterialPreset\\MaterialPresetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelFrontendPresets\\MaterialPreset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel 5.x Front-end preset for material dashboard",
+            "homepage": "https://github.com/creativetimofficial/material-dashboard-laravel",
+            "keywords": [
+                "laravel",
+                "material",
+                "preset"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-frontend-presets/material-dashboard/issues",
+                "source": "https://github.com/laravel-frontend-presets/material-dashboard/tree/master"
+            },
+            "time": "2020-03-23T16:17:32+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v7.30.4",
             "source": {
@@ -1022,6 +1069,61 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.6.1"
             },
             "time": "2021-03-02T16:53:12+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "d01a705763c243b07be795e9d1bb47f89260f73d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/d01a705763c243b07be795e9d1bb47f89260f73d",
+                "reference": "d01a705763c243b07be795e9d1bb47f89260f73d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/ui/issues",
+                "source": "https://github.com/laravel/ui/tree/v2.5.0"
+            },
+            "time": "2020-11-03T19:45:19+00:00"
         },
         {
             "name": "league/commonmark",
