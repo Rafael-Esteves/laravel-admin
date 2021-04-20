@@ -63,7 +63,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/users', 'AjaxController@index');
 Route::get('/getData/{id}','AjaxController@getData');
+Route::get('/getCursos/{id}','AjaxController@getCursos');
 
 Route::resource('aluno', 'AlunoController');
+Route::resource('curso', 'CursoController');
 
 

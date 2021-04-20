@@ -112,6 +112,42 @@ class AlunoController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $rules = [
+
+            'nome' => ['required', 'string', 'max:255'],
+            'codigo' => ['required', 'integer', 'max:9999'],
+            'situacao' => ['required', 'string', 'max:255'],
+            'curso' => ['required', 'string', 'max:255'],
+            'turma' => ['required', 'string', 'max:255'],
+            'data' => ['required', 'string', 'max:255'],
+            'imagem' => ['required'],
+            'cep' => ['required', 'integer'],
+            'bairro' => ['required', 'string', 'max:255'],
+            'logradouro' => ['required', 'string', 'max:255'],
+            'cidade' => ['required', 'string', 'max:255'],
+            'estado' => ['required', 'string', 'max:255'],
+            'complemento' => ['required', 'string', 'max:255'],
+        ];
+
+        
+        $this->validate($request, $rules);
+        $aluno = Aluno::find($id);
+        $aluno->nome = $request['nome'];
+        $aluno->codigo = $request['codigo'];
+        $aluno->situacao = $request['situacao'];
+        $aluno->curso = $request['curso'];
+        $aluno->turma = $request['turma'];
+        $aluno->data_matricula = $request['data'];
+        $aluno->imagem = $request['imagem'];
+        $aluno->cep = $request['cep'];
+        $aluno->cidade = $request['cidade'];
+        $aluno->estado = $request['estado'];
+        $aluno->numero = $request['numero'];
+        $aluno->bairro = $request['bairro'];
+        $aluno->complemento = $request['complemento'];
+
+       $aluno->save();
         return view('dashboard')->with('message', 'Dados do aluno atualizados com sucesso!');
     }
 
