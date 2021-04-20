@@ -25,6 +25,7 @@ class CreateTableAlunos extends Migration
             $table->string('estado');
             $table->string('bairro');
             $table->string('numero');
+            $table->string('logradouro');
             $table->string('complemento');
 
             $table->string('curso');

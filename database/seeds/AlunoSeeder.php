@@ -24,6 +24,7 @@ class AlunoSeeder extends Seeder
                 'cidade' => $faker->city,
                 'estado' => $faker->state,
                 'bairro' => $faker->city,
+                'logradouro' => $faker->streetName,
                 'numero' => $faker->buildingNumber,
                 'complemento' => $faker->buildingNumber,
         

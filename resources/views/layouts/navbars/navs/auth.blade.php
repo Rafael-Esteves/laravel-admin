@@ -1,8 +1,9 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top "> 
+<form class="navbar-form" action=""></form>
   <div class="container-fluid">
     <div class="navbar-wrapper">
-      <a class="navbar-brand" href="#">{{ $titlePage }}</a>
+      <a class="navbar-brand" href="#"></a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
     <span class="sr-only">Toggle navigation</span>

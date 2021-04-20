@@ -2,6 +2,15 @@
 
 @section('content')
   <div class="content">
+  @if (isset($message))
+      <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <i class="material-icons">close</i>
+                    </button>
+                    <span>
+                      <b> {{$message}}</span>
+                  </div>
+      @endif
     <div class="container-fluid">
       <div class="row">
       <div class="col-10">
@@ -20,7 +29,7 @@
         <div class="card">
           <div class="card-header card-header-primary">
             <h4 class="card-title ">Lista de alunos</h4>
-            <p class="card-category">Clique sobre um aluno para editar/excluir.</p>
+            <p class="card-category">Clique sobre um aluno para ir para a tela de edição.</p>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -97,13 +106,14 @@ len = response['data'].length;
 if(len > 0){
 for(var i=0; i<len; i++){
 var codigo = response['data'][i].codigo;
+var id = response['data'][i].id;
 var nome = response['data'][i].nome;
 var curso = response['data'][i].curso;
 var turma = response['data'][i].turma;
 var situacao = response['data'][i].situacao;
 var tr_str = "<tr>" +
 "<td >" + codigo + "</td>" +
-"<td >" + nome + "</td>" +
+"<td ><a href='<?php echo App::make('url')->to('/');?>/aluno/"+id+"/edit'>" + nome + "</a></td>" +
 "<td >" + curso + "</td>" +
 "<td >" + turma + "</td>" +
 "<td >" + situacao + "</td>" +

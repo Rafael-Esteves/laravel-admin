@@ -64,4 +64,6 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/users', 'AjaxController@index');
 Route::get('/getData/{id}','AjaxController@getData');
 
+Route::resource('aluno', 'AlunoController');
+
 
