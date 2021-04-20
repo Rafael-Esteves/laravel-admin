@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Aluno;
 
 class HomeController extends Controller
 {
@@ -23,4 +24,5 @@ class HomeController extends Controller
     {
         return view('dashboard');
     }
+    
 }

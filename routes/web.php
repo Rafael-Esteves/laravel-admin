@@ -61,3 +61,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
+Route::get('/users', 'AjaxController@index');
+Route::get('/getData/{id}','AjaxController@getData');
+
+
