@@ -31,7 +31,7 @@ class CreateTableAlunos extends Migration
             $table->string('curso');
             $table->string('turma');
             $table->date('data_matricula');
-            $table->string('imagem')->default('user.png');
+            $table->string('imagem')->default('public/user.png');
 
         });
     }
