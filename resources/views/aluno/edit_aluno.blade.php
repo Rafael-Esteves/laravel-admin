@@ -136,7 +136,7 @@
         <span class="btn btn-raised btn-round btn-default btn-file">
             <span class="fileinput-new">Selecionar imagem</span>
             <span class="fileinput-exists">Alterar</span>
-            <input type="file" name="imagem"  enctype="multipart/form-data" value="{{asset(str_replace('public/', 'storage/', $aluno->imagem))}}"/>
+            <input type="file" name="imagem"  enctype="multipart/form-data" value="https://aix-admin.s3-sa-east-1.amazonaws.com/{{$aluno->imagem}}"/>
         </span>
         <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
     </div>
