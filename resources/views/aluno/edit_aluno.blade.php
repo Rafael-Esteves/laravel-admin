@@ -129,7 +129,7 @@
                 </div>
                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
     <div class="fileinput-new thumbnail img-raised">
-        <img src="{{asset(str_replace('public/', 'storage/', $aluno->imagem))}}" alt="...">
+        <img src="https://aix-admin.s3-sa-east-1.amazonaws.com/{{$aluno->imagem}}" alt="...">
     </div>
     <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
     <div>
