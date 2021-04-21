@@ -277,21 +277,24 @@ $('#cep').on('input', function(){
 if($(this).val().length >= 8){
   $.ajax({
 url: 'http://serviceweb.aix.com.br/aixapi/api/cep/'+$(this).val(),
-type: 'get',
-dataType: 'json',
+type: 'GET',
+dataType: 'jsonp',
+crossDomain: true,
 data: {
         "_token": "{{ csrf_token() }}",
-        id: 'cep'
         },
 success: function(response){
+  
   $('#cidade').val('');
 $('#estado').val('');
 $('#logradouro').val('');
 $('#bairro').val('');
- $('#cidade').val(response['data'].cidade);
- $('#estado').val(response['data'].estado);
- $('#logradouro').val(response['data'].logradouro);
- $('#bairro').val(response['data'].bairro);
+
+ $('#cidade').val(response.cidade);
+ $('#estado').val(response.estado);
+ $('#logradouro').val(response.logradouro);
+ $('#bairro').val(response.bairro);
+ 
 }
 });
 
