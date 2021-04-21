@@ -1,5 +1,5 @@
 <?php
-
+require_once 'vendor/autoload.php';
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 
