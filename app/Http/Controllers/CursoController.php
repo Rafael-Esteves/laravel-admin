@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Curso;
+use XML;
 use Illuminate\Http\Request;
 
 class CursoController extends Controller
@@ -107,5 +108,23 @@ class CursoController extends Controller
         $curso->delete();
 
         return view('curso/view_cursos')->with('message', 'Curso excluído com sucesso!');
+    }
+
+    public function import(){
+        return view('curso/import_cursos');
+    }
+    
+    public function importStore(Request $request){
+        
+        $xml = XML::import($request->file('file'))->get();
+        foreach($xml->curso as $cursosXML){
+            $curso = new Curso;
+            $curso->nome = $cursosXML->nome;
+            $curso->codigo = $cursosXML->codigo;
+
+            $curso->save();
+        }
+
+        return view('curso/view_cursos')->with('message', 'Cursos importados com sucesso!');
     }
 }

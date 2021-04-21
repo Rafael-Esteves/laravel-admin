@@ -65,6 +65,10 @@ Route::get('/users', 'AjaxController@index');
 Route::get('/getData/{id}','AjaxController@getData');
 Route::get('/getCursos/{id}','AjaxController@getCursos');
 
+Route::get('curso/import', 'CursoController@import')->name('curso.import');
+Route::post('curso/importStore', 'CursoController@importStore')->name('curso.importStore');
+
+
 Route::resource('aluno', 'AlunoController');
 Route::resource('curso', 'CursoController');
 

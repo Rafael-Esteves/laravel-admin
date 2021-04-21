@@ -38,6 +38,13 @@
             <p>{{ __('Cadastrar cursos') }}</p>
         </a>
       </li>
+                  
+      <li class="nav-item{{ $activePage == 'import_cursos' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('curso.import') }}">
+          <i class="material-icons">upload</i>
+            <p>{{ __('Importar cursos') }}</p>
+        </a>
+      </li>
       
     </ul>
   </div>

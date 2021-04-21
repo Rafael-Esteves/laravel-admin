@@ -4,8 +4,78 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d069007744a9bc0b85ae07d4d511d8c",
+    "content-hash": "a358df661c81b40ed315cc51f262f936",
     "packages": [
+        {
+            "name": "acfbentveld/xml",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ACFBentveld/XML.git",
+                "reference": "e13034795fb1b64a9be5f23dce46ff6673d5a75a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ACFBentveld/XML/zipball/e13034795fb1b64a9be5f23dce46ff6673d5a75a",
+                "reference": "e13034795fb1b64a9be5f23dce46ff6673d5a75a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-simplexml": "*",
+                "illuminate/support": "5.*|6.*|7.*|8.*",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0|~4.0.0",
+                "phpunit/phpunit": "^7.0|^8.0",
+                "spatie/phpunit-snapshot-assertions": "^1.3|^4.0"
+            },
+            "suggest": {
+                "illuminate/view": "Required to use the load view feature.",
+                "laravel/laravel": "Required to use the load view feature."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ACFBentveld\\XML\\XMLServiceProvider"
+                    ],
+                    "aliases": {
+                        "XML": "ACFBentveld\\XML\\XMLFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ACFBentveld\\XML\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Amando Vledder",
+                    "email": "amando@acfbentveld.nl",
+                    "homepage": "https://acfbentveld.nl/",
+                    "role": "Developer"
+                }
+            ],
+            "homepage": "https://github.com/ACFBentveld/XML",
+            "keywords": [
+                "laravel",
+                "reader",
+                "xml"
+            ],
+            "support": {
+                "issues": "https://github.com/ACFBentveld/XML/issues",
+                "source": "https://github.com/ACFBentveld/XML/tree/v4.0.0"
+            },
+            "time": "2021-02-19T07:39:41+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.3",
