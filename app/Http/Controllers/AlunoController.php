@@ -56,6 +56,7 @@ class AlunoController extends Controller
         ];
         $this->validate($request, $rules);
 
+        $img_url = $request->file('imagem')->store('public');
 
         $aluno = new Aluno;
         $aluno->nome = $request['nome'];
@@ -64,12 +65,13 @@ class AlunoController extends Controller
         $aluno->curso = $request['curso'];
         $aluno->turma = $request['turma'];
         $aluno->data_matricula = $request['data'];
-        $aluno->imagem = $request['imagem'];
+        $aluno->imagem = $img_url;
         $aluno->cep = $request['cep'];
         $aluno->cidade = $request['cidade'];
         $aluno->estado = $request['estado'];
         $aluno->numero = $request['numero'];
         $aluno->bairro = $request['bairro'];
+        $aluno->logradouro = $request['logradouro'];
         $aluno->complemento = $request['complemento'];
 
        $aluno->save();
@@ -129,9 +131,10 @@ class AlunoController extends Controller
             'estado' => ['required', 'string', 'max:255'],
             'complemento' => ['required', 'string', 'max:255'],
         ];
-
-        
         $this->validate($request, $rules);
+
+        $img_url = $request->file('imagem')->store('public');
+
         $aluno = Aluno::find($id);
         $aluno->nome = $request['nome'];
         $aluno->codigo = $request['codigo'];
@@ -139,12 +142,13 @@ class AlunoController extends Controller
         $aluno->curso = $request['curso'];
         $aluno->turma = $request['turma'];
         $aluno->data_matricula = $request['data'];
-        $aluno->imagem = $request['imagem'];
+        $aluno->imagem = $img_url;
         $aluno->cep = $request['cep'];
         $aluno->cidade = $request['cidade'];
         $aluno->estado = $request['estado'];
         $aluno->numero = $request['numero'];
         $aluno->bairro = $request['bairro'];
+        $aluno->logradouro = $request['logradouro'];
         $aluno->complemento = $request['complemento'];
 
        $aluno->save();

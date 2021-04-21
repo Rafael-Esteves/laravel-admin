@@ -4,7 +4,7 @@
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
     <div class="col-11 ">
-      <form class="form" method="POST" action="{{ route('aluno.update', $aluno->id) }}">
+      <form class="form" method="POST"  enctype="multipart/form-data" action="{{ route('aluno.update', $aluno->id) }}">
         @csrf
 
         <div class="card card-login card-hidden mb-3">
@@ -129,14 +129,14 @@
                 </div>
                 <div class="fileinput fileinput-new text-center" data-provides="fileinput">
     <div class="fileinput-new thumbnail img-raised">
-        <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person_8x10.png" rel="nofollow" alt="...">
+        <img src="{{asset(str_replace('public/', 'storage/', $aluno->imagem))}}" alt="...">
     </div>
     <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
     <div>
         <span class="btn btn-raised btn-round btn-default btn-file">
             <span class="fileinput-new">Selecionar imagem</span>
             <span class="fileinput-exists">Alterar</span>
-            <input type="file" name="imagem" value="$aluno->imagem"/>
+            <input type="file" name="imagem"  enctype="multipart/form-data" value="{{asset(str_replace('public/', 'storage/', $aluno->imagem))}}"/>
         </span>
         <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
     </div>

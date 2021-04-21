@@ -25,7 +25,7 @@
         <span class="btn btn-raised btn-round btn-default btn-file">
             <span class="fileinput-new">Selecionar arquivo</span>
             <span class="fileinput-exists">Alterar</span>
-            <input type="file" name="file" id="file" enctype="multipart/form-data"/>
+            <input type="file" name="file" id="file" enctype="multipart/form-data" accept=".xml"/>
         </span>
         <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i>Remove</a>
     </div>

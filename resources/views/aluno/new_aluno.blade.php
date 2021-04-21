@@ -4,7 +4,7 @@
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
     <div class="col-11 ">
-      <form class="form" method="POST" action="{{ route('aluno.store') }}">
+      <form class="form" method="POST"  enctype="multipart/form-data" action="{{ route('aluno.store') }}">
         @csrf
 
         <div class="card card-login card-hidden mb-3">
@@ -136,7 +136,7 @@
         <span class="btn btn-raised btn-round btn-default btn-file">
             <span class="fileinput-new">Selecionar imagem</span>
             <span class="fileinput-exists">Alterar</span>
-            <input type="file" name="imagem" />
+            <input type="file" name="imagem"  enctype="multipart/form-data" accept=".png,.jpg">
         </span>
         <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
     </div>
@@ -281,8 +281,13 @@ type: 'get',
 dataType: 'json',
 data: {
         "_token": "{{ csrf_token() }}",
+        id: 'cep'
         },
 success: function(response){
+  $('#cidade').val('');
+$('#estado').val('');
+$('#logradouro').val('');
+$('#bairro').val('');
  $('#cidade').val(response['data'].cidade);
  $('#estado').val(response['data'].estado);
  $('#logradouro').val(response['data'].logradouro);
