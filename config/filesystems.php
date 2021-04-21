@@ -64,7 +64,7 @@ return [
             'region' => 'sa-east-1',
             'bucket' => 'aix-admin',
             'url' => env('AWS_URL'),
-            'endpoint' => env('AWS_ENDPOINT'),
+            'endpoint' => env('acess-aix'),
         ],
 
     ],

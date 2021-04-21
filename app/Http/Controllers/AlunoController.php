@@ -56,7 +56,7 @@ class AlunoController extends Controller
         ];
         $this->validate($request, $rules);
 
-        $img_url = $request->file('imagem')->store('public');
+        $img_url = $request->file('imagem')->storePublicly('public');
 
         $aluno = new Aluno;
         $aluno->nome = $request['nome'];
@@ -133,7 +133,7 @@ class AlunoController extends Controller
         ];
         $this->validate($request, $rules);
 
-        $img_url = $request->file('imagem')->store('public');
+        $img_url = $request->file('imagem')->storePublicly('public');
 
         $aluno = Aluno::find($id);
         $aluno->nome = $request['nome'];
